@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+          <!-- Meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />  <!-- w3c recomends this meta tag  -->
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />  <!-- w3c recomends this meta tag  -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="copyright" content="" />
+    <meta name="author" content="" />
+    <meta name="rating" content="general" />
+    <meta name="robots" content="all" />
+
+    <!-- Stylesheets -->
+
+    <link rel="stylesheet" href="css/materialize.min.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="css/google-fonts.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="css2/style.css" type="text/css" media="screen, projection" />        
+</head>
+<!--HEADER-->
+<header class="navbar-fixed">
+    <nav class="red">
+        <div class="nav-wrapper">
+           <span id="adoa"> ADOA</span>
+
+
+          
+                            <img src="img/usuario.jpg" class="circle right mini-perfil" id="imagen">
+                            <span id="user">Usuario</span> 
+                            <!--<i class="material-icons right">arrow_drop_down</i> -->
+                        
+                        
+        </div>
+    </nav>
+</header>
+
+<body>
+
+<!--   <div id="wrap"> -->
+   <!--  <div class="content"> -->
+         
+         <div class="section container">
+           <div  id="dropdown" >
+
+                <ul id="JqueryMenu">
+                    <li><a href="#">Informacion</a>
+                        <ul>
+                          
+                                                            <ul>
+                                    <li><a href="#">C 1</a>
+                                        <ul>
+                                            <li><a href="#">C1 a</a>
+                                                <ul>
+                                                    <li><a href="#">Item 1</a></li>
+                                                    <li><a href="#">Item 2</a></li>
+                                                    <li><a href="#">Item 3</a>
+                                                        <ul>
+                                                            <li><a href="#">a</a></li>
+                                                            <li><a href="#">b</a></li>
+                                                        </ul></li>
+                                                </ul></li>
+                                        </ul></li>
+                                </ul></li>
+                        
+                        </ul></li>
+                    <li><a href="#">Introduccion</a></li>
+                    <li><a href="#">Contenido</a>
+                        <ul>
+                            <li><a href="#">Item 3 A</a></li>
+                            <li><a href="#">Item 3 B</a></li>
+                            <li><a href="#">Item 3 C</a>
+                                <ul>
+                                    <li><a href="#">C 1</a>
+                                        <ul>
+                                            <li><a href="#">C1 a</a></li>
+                                            <li><a href="#">C1 b</a></li>
+                                            <li><a href="#">C1 c</a></li>
+                                        </ul></li>
+                                </ul></li>
+                            
+                                <ul>
+                                    <li><a href="#">E 1</a>
+                                        <ul>
+                                            <li><a href="#">E1 a</a></li>
+                                            <li><a href="#">E1 b</a></li>
+                                            <li><a href="#">E1 c</a></li>
+                                            <li><a href="#">E1 d</a></li>
+                                            <li><a href="#">E1 e</a></li>
+                                        </ul></li>
+                                </ul></li>
+                           
+                                <ul>
+                                    <li><a href="#">H 1</a>
+                                        <ul>
+                                            <li><a href="#">H1 a</a></li>
+                                            <li><a href="#">H1 b</a></li>
+                                        </ul></li>
+                                </ul></li>
+                            
+                        </ul></li>
+                    <li><a href="#">Actividad</a></li>
+                    <li><a href="#">Evaluacion</a></li>
+                    
+                </ul>
+
+           </div>  <!-- end of navmenu -->
+
+        </div>
+
+      
+
+         <div class="section container">
+            <div class="row">
+
+                <form class="col s7">
+                    <div class="row card-panel">
+
+                        <div class="input-field col s12">
+
+                            <input type="text" placeholder="Ingrese titulo" id="titulo" class="validate" required>
+                            <label for="titulo">Titulo:</label>
+                            
+                        </div>
+
+                        <div class="input-field col s12">
+
+                            <input type="text" placeholder="Ingrese descripcion" id="descripcion" class="validate" required>
+                            <label for="descripcion">Descripcion:</label>
+                            
+                        </div>
+
+                        <div class="input-field col s12">
+                            
+                            
+                              <select class="browser-default">
+                                <option value="" disabled selected>Seleccione el Patron Pedagogico</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                              </select>  
+                        </div>
+
+                        <div class="input-field col s12">
+
+                        <select class="browser-default">
+                                <option value="" disabled selected>Seleccione la Categoria</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                              </select>
+
+                              <br>
+                              <br>
+
+                        <button class="btn" type="submit">CREAR OBJETO</button>
+                        
+                        </div>
+                    </div>
+                    
+                </form>
+
+                <div class="col s5">
+
+        <div class="card red" id="tarjeta">
+
+        <div class="card-content white-text">
+            <span class="card-title">Crear objetos de Aprendizaje</span>
+            <p id="parrafo"> En el siguiente formulario complete los campos para crear un nuevo objeto de aprendizaje.</p>
+            <img src="img/libros.jpg" id="libro">
+          </div>
+
+        </div>
+
+
+
+
+            </div> 
+
+         </div>
+
+
+
+        
+      
+
+<!-- Javascripts -->
+    <script language="javascript" type="text/javascript" src="js/jquery-3.3.1.js"></script>  
+    <script language="javascript" type="text/javascript" src="js2/jquery.js"></script> 
+    <script language="javascript" type="text/javascript" src="js2/nav2.2.js"></script> 
+    <script language="javascript" type="text/javascript" src="js/efectos.js"></script> 
+    <script language="javascript" type="text/javascript" src="js/materialize.min.js"></script>
+   
+</body>
+</html>

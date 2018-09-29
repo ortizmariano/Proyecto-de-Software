@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      <link rel="stylesheet" href="C:\Users\Agesen\Documents\Sublime Text 3\Projects\ADOA\css\main.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>ADOA</title>
+    </head>
+
+    <body>
+      
+      <!-- add css style -->
+
+      <style>
+        body{
+          background-image: url(index.jpg);
+          background-size: cover;
+        }
+        .login{
+          margin-top: 100px;
+        }
+        .login .card{
+          background: rgba(0, 0, 0, 0.6);
+        }
+        .login label{
+          font-size: 16px;
+          color: #ccc;
+        }
+        .login input{
+          font-size: 22px;
+          color: #fff;
+        }
+        .login button:hover{
+          padding: 0px 33px;
+          box-shadow: 100px;
+        }
+      </style>
+
+
+      <!-- navbar -->
+
+      
+      <div class="navbar-fixed">
+        <nav class="red darken-4">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">ADOA</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                  <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                  <li>
+                    <a href="C:/Users/Agesen/Documents/Sublime%20Text%203/Projects/ADOA/index.html">Iniciar Sesion</a>
+                  </li>
+                  <li>
+                    <a href="#signin">Registrarse</a>
+                  </li>
+                  <li>
+                    <a href="#info">Información</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+
+      <!-- sidebar -->
+    
+
+      <ul class="sidenav" id="mobile-nav">
+    
+        <li>
+          <a href="C:/Users/Agesen/Documents/Sublime%20Text%203/Projects/ADOA/index.html">Iniciar Sesion</a>
+        </li>
+        <li>
+          <a href="#signin">Registrarse</a>
+        </li>
+        <li>
+          <a href="#info">Información</a>
+        </li>
+      </ul>
+
+
+
+      <!-- login form -->
+
+      <div class="row login">
+        <div class="col s12 m8 l4 offset-m2 offset-l4">
+          <div class="card">
+            <div class="card-action red accent-4 white-text">
+                <h4 class="center-align">Iniciar Sesion</h4>
+            </div>
+
+            <div class="card-content">
+
+              <div class="form-field">
+                <label for="username">Nombre de usuario</label>
+                <input type="text" id="username">
+              </div><br>
+              
+              <div class="form-field">
+                <label for="password">Clave</label>
+                <input type="password" id="password">
+              </div><br>
+
+              <p>
+                <label>
+                  <input type="checkbox" id="remember" />
+                  <span>Recordarme</span>
+                </label>
+              </p><br>
+
+              <div class="form-field center-align">
+                <a class="waves-effect waves-light btn-large red accent-4" href="file:///C:/Users/mariano.ortiz/Desktop/Proyecto/Materialize/materialize/index.html">INGRESAR</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Footer -->
+
+      <footer class="section red accent-4 white-text center">
+        <p class="flow-text">ADOA &copy; 3.0 - UNLa</p>
+      </footer>
+
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+      </script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     
+
+      <script type="text/javascript"> 
+        (function($){
+          $(function(){
+
+              $('.sidenav').sidenav();
+
+          }); // end of document ready
+        })(jQuery); // end of jQuery name space      
+      </script>
+      
+<!--
+      <script>
+        // Sidenav
+        const sideNav = document.querySelector('.sidenav');
+        M.SideNav.init(sideNav, {});
+      </script>
+    
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.sidenav');
+          var instances = M.Sidenav.init(sideNav, {});
+        });
+      </script>
+-->
+
+
+    </body>
+  </html>
+        

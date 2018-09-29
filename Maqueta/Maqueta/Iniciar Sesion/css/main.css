@@ -1,0 +1,9 @@
+.section-search input {
+	font-size: 18px !important;
+	width: 100% !important;
+	border: #f4f4f4 3px solid !important;
+}
+
+.section-links .fa-4x{
+	margin: 5px 10px;
+}
