@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/materialize.min.css')}}" media="screen,projection"/>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+     
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <TITLE>Adoa</TITLE>
+    </head>
+
+    <body>
+    
+      <style>
+         body{
+          background-image: url(static/images/educacion.jpeg);
+          background-size: cover;
+        }
+        .login{
+          margin-top: 20px;
+        }
+        .login .card{
+          background: rgba(0, 0, 0, 0.6);
+        }
+        .login label{
+          font-size: 16px;
+          color: #ccc;
+        }
+        .login input{
+          font-size: 22px;
+          color: #fff;
+        }
+        .login button:hover{
+          padding: 0px 33px;
+          box-shadow: 100px;
+        }
+        [type="checkbox"].filled-in:checked + span:not(.lever):after {
+ 
+              top: 0;
+             
+              width: 20px;
+             
+              height: 20px;
+             
+              border: 2px solid #e6ee9c;
+             
+              background-color: #afb42b;
+             
+              z-index: 0;
+ 
+}
+      </style>
+
+
+      <!-- navbar -->
+      <div class="navbar-fixed">
+        <nav class="red accent-4">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">ADOA</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                  <li><a href="{{url_for('index')}}">Inicio</a></li>
+                  <li><a href="{{url_for('registro')}}">Registrarse</a></li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+  
+
+      <!-- login form -->
+
+      <div class="row login">
+        <div class="col s12 m8 l4 offset-m2 offset-l4">
+          <form id="login" class="col s12" action="/login" method="POST">
+                <div class="card">
+                  <div class="card-action red accent-4 white-text">
+                      <h4 class="center-align">Iniciar Sesion</h4>
+                  </div>
+
+                  <div class="card-content">
+
+                      <div class="input-field col s12">
+                           <input placeholder="Nombre" id="first_name" type="text" name="nombre" class="validate"  required="" aria-required="true">
+                      </div>
+                      <div class="input-field col s12">
+                         <input placeholder="Contraseña" id="last_name" type="password" name="pass" class="validate"  required="" aria-required="true">
+                       </div><br>
+
+                      <p>
+                        <label>
+                          <input type="checkbox" id="remember" />
+                          <span>Recordarme</span>
+                        </label>
+                      </p><br>
+                      <p>
+                        <li><a href="{{url_for('index')}}">¿Olvidaste tu contraseña?</a></li>
+                      </p><br>
+                    <p class="center-align">
+                        <button class="waves-effect waves-light btn-large red accent-4" type="ingresar" name="action">INGRESAR
+                        </button>
+                        </p>
+                  </div>
+                </div>
+          </form>
+        </div>
+      </div>
+
+
+      <!-- Footer -->
+
+      <footer class="section red accent-4 white-text center">
+        <p class="flow-text">ADOA &copy; 3.0 - UNLa</p>
+      </footer>
+
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+      </script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     
+
+      <script type="text/javascript"> 
+        (function($){
+          $(function(){
+
+              $('.sidenav').sidenav();
+
+          }); // end of document ready
+        })(jQuery); // end of jQuery name space      
+      </script>
+      
+<!--
+      <script>
+        // Sidenav
+        const sideNav = document.querySelector('.sidenav');
+        M.SideNav.init(sideNav, {});
+      </script>
+    
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.sidenav');
+          var instances = M.Sidenav.init(sideNav, {});
+        });
+      </script>
+-->
+
+
+    </body>
+  </html>
+        

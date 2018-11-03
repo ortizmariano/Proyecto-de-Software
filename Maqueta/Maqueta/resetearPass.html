@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <TITLE>Adoa</TITLE>
+    <body>
+      <style>
+        body{
+          background-image: url(images/administrador2.jpg);
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-attachment:fixed;
+          
+        }
+        
+    .card{
+          background: rgba(0, 0, 0, 0.3);
+
+        }
+
+      </style>
+                
+       <div class="navbar-fixed">
+        <nav class="red accent-4">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">ADOA</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                  <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                  <li>
+                    <a href="administrador.html">Regresar</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+        
+        <div class="container">             
+                        <form class="col s8">
+                            <div class="container">
+                                            <div class="row">
+                                                <div class="col s12"><h3 class=black-text>Reseteo de Contraseña</h3></div>
+                                                
+                                            </div>
+                                            
+                                                <div class="input-field col s3">
+                                                  
+                                                  <input disabled value="Nombre de Usuario" id="disabled" type="text" class="validate">
+                                                  
+                                                </div>
+                                            
+                                                  <a class="waves-effect waves-light btn-small" href="#"><i class="material-icons right">autorenew</i>Resetear contraseña</a>
+                                            <div class="col s12"><h3 class=black-text>Contraseña nueva</h3></div>
+                                            <div class="input-field col s3">
+                                                  
+                                                  <input disabled value="XXXXXXXXX" id="disabled" type="text" class="validate">
+                                                  
+                                                </div>
+                                        </form>    
+                            </div>
+        </div>
+        
+     
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script src= "js/jquery.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+          $(document).ready(function(){
+          $('.sidenav').sidenav();
+          $('.tabs').tabs();
+          $(".dropdown-trigger").dropdown({
+             coverTrigger: false
+                });
+            });
+      </script>
+    </body>
+  </html>
+        

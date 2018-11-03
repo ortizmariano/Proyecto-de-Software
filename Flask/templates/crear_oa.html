@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	  <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/materialize.css')}}" media="screen,projection"/>
+
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+      <link rel="stylesheet" href="css/main.css" type="text/css" media="screen, projection" />
+      <script type="text/javascript"  src="{{url_for('static', filename='ckeditor/ckeditor.js')}}"></script>
+
+     <!-- <link rel="stylesheet" href="C:\Users\Agesen\Documents\Sublime Text 3\Projects\ADOA\css\main.css"> -->
+
+	<title>ADOA</title>
+</head>
+<body>
+
+    <!-- add css style -->
+
+      <style>
+        body{
+          background-image: url(static/images/letras.jpg);
+          background-size: 100%;
+          background-repeat: no-repeat;
+          
+        }
+        .login{
+          margin-top: 20px;
+        }
+        .login .card{
+          background: rgba(0, 0, 0, 0.6);
+        }
+        .login label{
+          font-size: 16px;
+          color: #ccc;
+        }
+        .login input{
+          font-size: 22px;
+          color: #fff;
+        }
+        .login button:hover{
+          padding: 0px 33px;
+          box-shadow: 100px;
+        }
+		.card{
+          background: rgba(0, 0, 0, 0.6);
+        }
+
+        .input-field.col.s4 { width: 400px; }
+        .tabs .indicator { background-color: #000000;
+        height:3px; 
+                        } 
+      </style>
+
+
+	<!-- navbar -->
+
+      
+       <div class="navbar-fixed">
+        <nav class="red accent-4">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">ADOA</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                  <li><a href="{{url_for('inicio')}}"><i class="material-icons left">home</i>Inicio</a></li>
+                  <li class="disable"><a href="#"><i class="material-icons left">account_circle</i>Nombre Usuario</a></li>
+                  <li><a class='dropdown-trigger' data-beloworigin="true" href='#' data-target='dropdown1'><i class="material-icons">keyboard_arrow_down</i></a>
+                        <ul id='dropdown1' class='dropdown-content'>
+                          <li><a href="{{url_for('perfil')}}">Mi Perfil</a></li>
+                          <li class="divider" tabindex="-1"></li>
+                          <li><a href="{{url_for('password')}}">Cambiar Contraseña</a></li>
+                          <li class="divider" tabindex="-1"></li>
+                          <li><a href="{{url_for('index')}}">Cerrar sesión</a></li>
+                          <li><a href="{{url_for('reportar')}}">Reportar Problema</a></li>
+                        </ul>
+                  </li>
+                  
+                </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+
+<!--Etapas de Creacion del AO -->
+    
+    <div class="section container"> 
+            <div class="row">
+                  <div class="col s12">
+                        <ul class = "tabs red accent-4" style="padding-left:1%; padding-right:1%;">
+                            <li class ="tab col s3" ><a href="#informacion" class="white-text">Informacion</a></li>
+                            <li class ="tab col s2"><a href="#introduccion" class="white-text">Introduccion</a></li>
+                            <li class ="tab col s2" ><a href="#contenido" class="white-text">Contenido</a></li>
+                            <li class ="tab col s2" ><a href="#actividad" class="white-text">Actividad</a></li>
+                            <li class ="tab col s3" ><a href="#evaluacion" class="white-text">Evaluacion</a></li>
+                        </ul>
+<!----------------------------------------INTRODUCCION---------------------------------------->
+                       
+                        <div id="informacion" class="s12">
+
+                          
+                               
+                                       <div class="card">
+                                            <div class="card-action red accent-4 white-text"> 
+
+                                                <h5 class="center-align">Informacion</h5>
+                                            </div>
+
+                                                 <div class="card-content">
+
+                                                      <div class="form-field">
+                                                           <label for="titulo" class="white-text">Titulo:</label>
+                                                           <input type="text" id="titulo">
+                                                     </div><br>
+              
+                                                    <div class="form-field">
+                                                         <label for="descripcion" class="white-text">Descripcion:</label>
+                                                         <input type="text" id="descripcion">
+                                                    </div><br>
+
+                                                      <div class="input-field col s12">
+                            
+                                                            <select class="browser-default">
+                                                               <option value="" disabled selected>Seleccione el Patron Pedagogico</option>
+                                                               <option value="1">Early Bird</option>
+                                                               <option value="2">Spiral</option>
+                                                               <option value="3">Lay of the Land</option>
+                                                               <option value="3">Toy Box</option>
+                                                               <option value="3">ToolBox</option>
+                                                            </select>  
+                                                      </div> 
+
+                                                      <div class="input-field col s12">
+                            
+                                                              <select class="browser-default">
+                                                                 <option value="" disabled selected>Seleccione la Categoria</option>
+                                                                 <option value="1">Option 1</option>
+                                                                 <option value="2">Option 2</option>
+                                                                 <option value="3">Option 3</option>
+                                                              </select>  
+                                                     </div> 
+
+
+                                                     <div class="form-field center-align">
+                                                          <button class="btn-large red accent-4">GUARDAR</button>
+                                                     </div>
+
+                                            </div> <!--card-content -->
+                                       </div> <!-- end card -->
+                                             
+                            </div> <!--end row login -->
+                                
+                        </div> <!--end informacion -->
+
+
+<!----------------------------------------INTRODUCCION---------------------------------------->
+
+         <div id="introduccion" class="col s12 ">
+           
+              
+                 <div class="card">
+                      <div class="card-action red accent-4 white-text"> 
+                            <h5 class="center-align">Introducción </h5>
+                      </div>
+                      <div class="card-content">
+                          <div class="form-field">
+                            <label for="titulo" class="white-text">Introduzca una breve descripcion del tema a desarrollar</label>
+                            <textarea id="ckeditor" class="ckeditor"></textarea>  
+                                  <div class="section container">  
+                                      <div class="form-field center-align">
+                                          <button class="btn-large red accent-4">GUARDAR</button>
+                                      </div> 
+                                  </div>    
+                          </div> <!--card-content -->
+                      </div> <!-- end card -->
+                           
+              
+           </div>
+        </div>
+
+                  
+
+<!----------------------------------------CONTENIDO------------------------------------------>
+
+ <div id="contenido" class="col s12 ">
+           
+              
+                 <div class="card">
+                      <div class="card-action red accent-4 white-text"> 
+                            <h5 class="center-align">Contenido </h5>
+                      </div>
+                      <div class="card-content">
+                          <div class="form-field">
+                                <label for="titulo" class="white-text">Presentacion del tema</label>
+                                <textarea id="ckeditor" class="ckeditor"></textarea>  
+                                <div class="section container">  
+                                  <div class="form-field center-align">
+                                    <button class="btn-large red accent-4">GUARDAR</button>
+                                  </div> 
+                                </div>    
+                         </div> <!--card-content -->
+                     </div> <!-- end card -->
+                 </div>  
+              
+           
+   </div>        
+
+
+<!----------------------------------------ACTIVIDAD------------------------------------------->
+
+    <div id="actividad" class="col s12">
+                 <div class="card">
+                      <div class="card-action red accent-4 white-text"> 
+                            <h5 class="center-align">Actividad </h5>
+                      </div>
+                      <div class="card-content">
+                          <div class="row">
+
+                                <p class="white-text">Seleccione una o mas de las actividades disponibles para desarrollar el objeto</p>
+                                 <div class="input-field col s4">
+                                    <input placeholder="Nombre" id="first_name" type="text" class="validate">
+                                 </div>
+                          </div> 
+                          <div class="row">
+                                <div class="input-field col s4">
+                                     <select class="browser-default">
+                                       <option classvalue="" disabled selected>Seleccione la Categoria</option>
+                                       <option value="1">Option 1</option>
+                                       <option value="2">Option 2</option>
+                                       <option value="3">Option 3</option>
+                                    </select>  
+                                 </div>       
+                          </div> 
+                          
+                          <div class="form-field center-align">
+                                    <button class="btn-large red accent-4">GUARDAR</button>
+                          </div>
+                      </div> 
+                     
+
+                  </div>
+      </div>
+
+
+<!------------------------------------------EVALUACION-------------------------------------------->
+
+          <div id="evaluacion" class="s12">
+            <div class=" section container">
+          <div class="form-field left-align">
+         <button class="btn-large red accent-4">Agregar Pregunta</button>
+        </div>
+          </div>
+          </div>
+                   
+
+        
+
+
+
+      <!--JavaScript at end of body for optimized loading-->
+     <script src="{{url_for('static', filename='js/jquery.js')}}"></script>
+      <script type="text/javascript" src="{{url_for('static', filename='js/materialize.min.js')}}"></script>
+      <script type="text/javascript"  src="{{url_for('static', filename='ckeditor/ckeditor.js')}}"></script>
+      <script>
+          $(document).ready(function(){
+          $('.sidenav').sidenav();
+          $('.tabs').tabs();
+          $('select').formSelect();
+          $(".dropdown-trigger").dropdown({
+             coverTrigger: false
+                });
+          
+            });
+      </script>
+
+</body>
+</html>

@@ -4,7 +4,7 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="C:\Users\admin\Desktop\Proyecto\Maqueta\Maqueta\css\materialize.css"  media="screen,projection"/>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
       <link rel="stylesheet" href="C:\Users\Agesen\Documents\Sublime Text 3\Projects\ADOA\css\main.css">
 
@@ -38,7 +38,21 @@
           padding: 0px 33px;
           box-shadow: 100px;
         }
-        
+        [type="checkbox"].filled-in:checked + span:not(.lever):after {
+ 
+              top: 0;
+             
+              width: 20px;
+             
+              height: 20px;
+             
+              border: 2px solid #e6ee9c;
+             
+              background-color: #afb42b;
+             
+              z-index: 0;
+ 
+}
       </style>
 
 
@@ -87,7 +101,9 @@
                   <span>Recordarme</span>
                 </label>
               </p><br>
-
+              <p>
+                <li><a href="{{url_for('index')}}">¿Olvidaste tu contraseña?</a></li>
+              </p><br>
               <div class="form-field center-align">
                 <a class="waves-effect waves-light btn-large red accent-4" href="index.html">INGRESAR</a>
               </div>

@@ -4,8 +4,8 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
+      
+      <link type="text/css" rel="stylesheet" href="css\materialize.css"  media="screen,projection"/>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
@@ -23,8 +23,19 @@
                 <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                   <li><a href="index.html"><i class="material-icons left">home</i>Inicio</a></li>
-                  <li><a href="perfil.html"><i class="material-icons left">account_circle</i>Mi perfil</a></li>
-                  <li><a href="main.html"><i class="material-icons left">exit_to_app</i>Cerrar Sesion</a></li>
+                  <li class="disable"><a href=""><i class="material-icons left">account_circle</i>Nombre Usuario</a></li>
+                  <li><a class='dropdown-trigger' data-constrainwidth="false" href='#' data-target='dropdown1'><i class="material-icons">keyboard_arrow_down</i></a>
+                        <ul id='dropdown1' class='dropdown-content' >
+                          <li><a href="perfil.html">Mi Perfil</a></li>
+                          <li class="divider" tabindex="-1"></li>
+                          <li><a href="cambiarContraseña.html">Cambiar Contraseña</a></li>
+                          <li class="divider" tabindex="-1"></li>
+                          <li><a href="main.html">Cerrar sesión</a></li>
+                          <li class="divider" tabindex="-1"></li>
+                          <li><a href="reportar.html">Reportar Problema</a></li>
+                        </ul>
+                  </li>
+                  
                 </ul>
             </div>
           </div>
@@ -39,13 +50,14 @@
                             <li class ="tab col s4"><a href="#crearObjetos" class="white-text">Crear Objetos</a></li>
                             <li class ="tab col s4" ><a href="#todosLosObjetos" class="white-text">Todos los Objetos</a></li>
                         </ul>
+<!-************Crear Objetos*************************** ->
                         <div id="crearObjetos" class="s12">
                               <div class="container">
                                     <div class="row">
                                           <div class="col s12">
                                               <h4 class="white-text">Informacion sobre los distintos patrones y el proposito de la seccion</h4>
                                           </div>
-                                          <a class="waves-effect waves-light btn" href="C:\Users\admin\Downloads\Adoa-VersionActualizada\ADOA-2018\crear_oa.html"><i class="material-icons left">add_circle</i>Crear Objeto</a>
+                                          <a class="waves-effect waves-light btn" href="crear_oa.html"><i class="material-icons left">add_circle</i>Crear Objeto</a>
                                     </div>
                               </div>      
                                 
@@ -140,50 +152,92 @@
                           </div>
         <!-************Objetos de otros autores*************************** ->
                           <div id="todosLosObjetos" class="s12">
-                                <ul class="collection">
-                                      <li class="collection-item avatar">
-                                            <img src="images/descarga (1).jpeg" alt="" class="circle">
-                                                 <span class="title">Nombre de Objeto 1</span>
-                                                    <p>Categoria<br>Descripcion</p>
-                                              <a href="#!" class="secondary-content">
-                                                <i class="material-icons">get_app</i>
-                                                <i class="material-icons">remove_red_eye</i>
-                                              </a>
-                                      </li>
-                                      <li class="collection-item avatar">
-                                            <img src="images/descarga (2).jpeg" alt="" class="circle">
-                                                <span class="title">Nombre de Objeto 2</span>
-                                                      <p>Categoria <br>
-                                                          Descripcion
-                                                      </p>
-                                                <a href="#!" class="secondary-content">
-                                                   <i class="material-icons">get_app</i>
-                                                   <i class="material-icons">remove_red_eye</i>
-                                                </a>
-                                      </li>
-                                      <li class="collection-item avatar">
-                                            <img src="images/images (3).jpeg" alt="" class="circle">
-                                                 <span class="title">Nombre de Objeto 3</span>
-                                                        <p>Caategoria <br>
-                                                             Descripcion
-                                                        </p>
-                                                   <a href="#!" class="secondary-content">
-                                                      <i class="material-icons">get_app</i>
-                                                      <i class="material-icons">remove_red_eye</i>
-                                                   </a>
-                                      </li>
-                                      <li class="collection-item avatar">
-                                            <img src="images/images (1).png" alt="" class="circle">
-                                                <span class="title">Nombre de Objeto 4</span>
-                                                <p>Categoria<br>
-                                                   Descripcion
-                                                </p>
-                                                 <a href="#!" class="secondary-content">
-                                                    <i class="material-icons">get_app</i>
-                                                    <i class="material-icons">remove_red_eye</i>
-                                                 </a>
-                                      </li>
-                                </ul>
+                                <div class="col s12 m3">
+                                  <div class="card small">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                               <img class="activator" src="images/matematica.jpg">
+                                        </div>
+                                        <div class="card-content ">
+                                              <span class="card-title activator grey-text text-darken-4">Nombre de Objeto 1<i class="material-icons right">more_vert</i></span>        
+                                        </div>
+                                        <div class="card-reveal">
+                                              <span class="card-title grey-text text-darken-4">Descripcion<i class="material-icons right">close</i></span>
+                                              <p>Descripción breve del Objeto</p>
+                                              <p><a href="#">Ver</a></p>
+                                              <p><a href="#">Descargar</a></p>
+                                              <p><a href="#">Importar</a></p>
+                                              <p><a href="reportar_oa.html">Reportar</a></p>
+                                        </div>
+                                  </div>
+                            </div>
+                            <div class="col s12 m3">
+                                  <div class="card small">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                               <img class="activator" src="images/quimica.JPG">
+                                        </div>
+                                        <div class="card-content ">
+                                              <span class="card-title activator grey-text text-darken-4">Nombre de Objeto 2<i class="material-icons right">more_vert</i></span>        
+                                        </div>
+                                        <div class="card-reveal">
+                                              <span class="card-title grey-text text-darken-4">Descripcion<i class="material-icons right">close</i></span>
+                                              <p>Descripción breve del Objeto</p>
+                                              <p><a href="#">Editar</a></p>
+                                              <p><a href="#">Exportar</a></p>
+                                              <p><a href="#">Ver</a></p>
+                                        </div>
+                                  </div>
+                            </div>
+                            <div class="col s12 m3">
+                                  <div class="card small">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                               <img class="activator" src="images/geografia.jpg">
+                                        </div>
+                                        <div class="card-content ">
+                                              <span class="card-title activator grey-text text-darken-4">Nombre de Objeto 3<i class="material-icons right">more_vert</i></span>        
+                                        </div>
+                                        <div class="card-reveal">
+                                              <span class="card-title grey-text text-darken-4">Descripcion<i class="material-icons right">close</i></span>
+                                              <p>Descripción breve del Objeto</p>
+                                              <p><a href="#">Editar</a></p>
+                                              <p><a href="#">Exportar</a></p>
+                                              <p><a href="#">Ver</a></p>
+                                        </div>
+                                  </div>
+                            </div>
+                            <div class="col s12 m3">
+                                  <div class="card small">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                               <img class="activator" src="images/bilogia2.jpg">
+                                        </div>
+                                        <div class="card-content ">
+                                              <span class="card-title activator grey-text text-darken-4">Nombre de Objeto 4<i class="material-icons right">more_vert</i></span>        
+                                        </div>
+                                        <div class="card-reveal">
+                                              <span class="card-title grey-text text-darken-4">Descripcion<i class="material-icons right">close</i></span>
+                                              <p>Descripción breve del Objeto</p>
+                                              <p><a href="#">Editar</a></p>
+                                              <p><a href="#">Exportar</a></p>
+                                              <p><a href="#">Ver</a></p>
+                                        </div>
+                                  </div>
+                            </div>
+                            <div class="col s12 m3">
+                                  <div class="card small">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                               <img class="activator" src="images/arte.jpg">
+                                        </div>
+                                        <div class="card-content ">
+                                              <span class="card-title activator grey-text text-darken-4">Nombre de Objeto 5<i class="material-icons right">more_vert</i></span>        
+                                        </div>
+                                        <div class="card-reveal">
+                                              <span class="card-title grey-text text-darken-4">Descripcion<i class="material-icons right">close</i></span>
+                                              <p>Descripción breve del Objeto</p>
+                                              <p><a href="#">Editar</a></p>
+                                              <p><a href="#">Exportar</a></p>
+                                              <p><a href="#">Ver</a></p>
+                                        </div>
+                                  </div>
+                            </div>
                           </div>
                   </div>
                 </div>
@@ -196,6 +250,10 @@
           $(document).ready(function(){
           $('.sidenav').sidenav();
           $('.tabs').tabs();
+          $(".dropdown-trigger").dropdown({
+             coverTrigger: false
+                });
+          
             });
       </script>
     </body>

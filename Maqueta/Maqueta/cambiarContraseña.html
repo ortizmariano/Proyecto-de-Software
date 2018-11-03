@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <TITLE>Adoa</TITLE>
+    <body>
+      <style>
+        body{
+          background-image: url(images/educacion.jpg);
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-attachment:fixed;
+          
+        }
+        
+    .card{
+          background: rgba(0, 0, 0, 0.3);
+
+        }
+
+      </style>
+                
+       <div class="navbar-fixed">
+        <nav class="red accent-4">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">ADOA</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                  <li><a href="index.html"><i class="material-icons left">home</i>Inicio</a></li>
+                  <li class="disable"><a href=""><i class="material-icons left">account_circle</i>Nombre Usuario</a></li>
+                  <li><a class='dropdown-trigger' data-constrainwidth="false" href='#' data-target='dropdown1'><i class="material-icons">keyboard_arrow_down</i></a>
+                        <ul id='dropdown1' class='dropdown-content' >
+                          <li><a href="perfil.html">Mi Perfil</a></li>
+                          <li class="divider" tabindex="-1"></li>
+                          <li><a href="cambiarContraseña.html">Cambiar Contraseña</a></li>
+                          <li class="divider" tabindex="-1"></li>
+                          <li><a href="main.html">Cerrar sesión</a></li>
+                          <li class="divider" tabindex="-1"></li>
+                          <li><a href="reportar.html">Reportar Problema</a></li>
+                        </ul>
+                  </li>
+                  
+                </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+        <div class="card">
+        <div class="container">             
+                        <form class="col s8">
+                                            <div class="row">
+                                                <div class="col s12"><h3 class=black-text>Cambio de Contraseña</h3></div>
+                                                <div class="input-field col s3" class="white-text" >
+                                                    <input placeholder="Contraseña Actual" id="pass" type="text" class="validate" >
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s3">
+                                                    <input placeholder="Contraseña Nueva" id="newpass" type="text" class="validate">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col s3">
+                                                    <input placeholder="Repetir Contraseña" id="newpass2" type="text" class="validate">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="container section">
+                                              <button class="btn waves-effect waves-light" type="registrarse" name="action">Confirmar
+                                                  <i class="material-icons right">send</i>
+                                              </button>
+                                            </div>
+                                        </form>    
+                    
+        </div>
+        </div>
+     
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script src= "js/jquery.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+          $(document).ready(function(){
+          $('.sidenav').sidenav();
+          $('.tabs').tabs();
+          $(".dropdown-trigger").dropdown({
+             coverTrigger: false
+                });
+            });
+      </script>
+    </body>
+  </html>
+        

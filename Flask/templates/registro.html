@@ -1,0 +1,137 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/materialize.min.css')}}" media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+              <TITLE>Adoa</TITLE>
+    <body>
+        <style>
+                 body{
+                  background-image: url('static/images/registro.jpg');
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  background-attachment:fixed;
+                }
+                .card{
+                  background: rgba(222, 222, 222, 0.4);
+                  width:650px;
+
+                }
+                textarea {
+                        width: 700px;
+                        height: 150px;
+               }
+                input::-webkit-input-placeholder {
+          color: black;
+                   }
+
+        </style>
+          <div class="navbar-fixed">
+                <nav class="red accent-4">
+                      <div class="container">
+                             <div class="nav-wrapper">
+                                   <a href="#" class="brand-logo">ADOA</a>
+                                   <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                                      <i class="material-icons">menu</i>
+                                   </a>
+                                   <ul class="right hide-on-med-and-down">
+                                   <li>
+                                       <a href="{{url_for('index')}}"><i class="material-icons left">home</i>Inicio</a>
+                                      </li>
+                                  </ul>
+                             </div>
+                      </div>
+                </nav>
+          </div>
+        <div class="container">
+                <form id="registro" class="col s8" action="/registro2" method="POST">
+                  <div class="col s12"><h3 class=white-text>Formulario de registro</h3></div>
+                  
+                  <div class="card">
+                    <div class="container">
+                       <div class="row">
+                            
+                            <div class="input-field col s4">
+                                  <input placeholder="Nombre" id="first_name" type="text" name="nombre" class="validate"  required="" aria-required="true">
+                            </div>
+                            <div class="input-field col s4">
+                                  <input placeholder="Apellido" id="last_name" type="text" name="apellido" class="validate"  required="" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="row">
+                              <div class="col s12"><h6 class=black-text>Sexo</h6></div>
+                              <div class="col s1"></div>
+                              <label>
+                                  <input class="with-gap" name="sexo" value="f" type="radio"/>
+                                    <span class=black-text>Femenino</span>
+                              </label>
+                              <label>
+                                  <input class="with-gap" name="sexo" value="m" type="radio"  />
+                                    <span class=black-text>Masculino</span>
+                              </label>
+                          
+                        </div>   
+                        
+                        <div class="row"> 
+                              <div class="input-field col s8">
+                                    <input placeholder="Carrera" id="carrera" type="text" name="carrera" class="validate"  required="" aria-required="true">
+                              </div>
+                        </div>
+                        <div class="row"> 
+                              <div class="input-field col s8">
+                                    <input placeholder="E-mail" id="email" name="email" type="text" class="validate"  required="" aria-required="true">
+                              </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s8">
+                               <input placeholder="Contraseña" name="pass" required="required" type="password" id="password" />
+                          </div>
+                          <div class="input-field col s8">
+                              <input placeholder="Confirmar contraseña" name="password_confirm" required="required" type="password" id="password_confirm" oninput="check(this)" />
+                          
+                        <p class="center-align">
+                        <button class="btn waves-effect waves-light" type="registrarse" name="action">Registrarse
+                        <i class="material-icons right">send</i>
+                        </button>
+                        </p>
+                        </div>
+                        </div>
+                </div>
+               </div>
+                </form>
+               
+             
+
+           </div>
+     
+      
+
+      <!--JavaScript at end of body for optimized loading-->
+      
+      <script src="{{url_for('static', filename='js/jquery.js')}}"></script>
+      <script type="text/javascript" src="{{url_for('static', filename='js/materialize.min.js')}}"></script>
+      <script language='javascript' type='text/javascript'>
+                          function check(input) {
+                              if (input.value != document.getElementById('password').value) {
+                                  input.setCustomValidity('La contraseña no coincide');
+                              } else {
+                                  // input is valid -- reset the error message
+                                  input.setCustomValidity('');
+                              }
+                          }
+                        </script>
+      <script> 
+           $(document).ready(function(){
+            $('select').formSelect();
+            });
+           
+      </script>
+  
+    </body>
+  </html>
