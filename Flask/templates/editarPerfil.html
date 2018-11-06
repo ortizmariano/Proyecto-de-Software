@@ -60,44 +60,54 @@
        
         <div class="container">
             <form id="editarPerfil" class="col s8" action="/editarPerfil2" method="POST">         
-               <div class="card">  
+                <div class="card">  
                        
                      <img class="responsive-img" src="{{url_for('static',filename='images/descarga (3).jpeg')}}" align="left">  
-                     <div class="container">          
-                        <div class="input-field col s4">
-                                  <input value="{{nombre}}" id="first_name" type="text" name="nombre" class="validate"  required="" aria-required="true">
-                        </div> 
-                        <div class="input-field col s4">
-                                  <input value="{{apellido}}" id="last_name" type="text" name="apellido" class="validate"  required="" aria-required="true">
-                        </div>    
-                        <div class="row">
-                              <div class="col s12"><h6 class=black-text>Sexo</h6></div>
-                              <div class="col s1"></div>
-                              <label>
-                                  <input class="with-gap" name="sexo" value="f" type="radio"/>
-                                    <span class=black-text>Femenino</span>
-                              </label>
-                              <label>
-                                  <input class="with-gap" name="sexo" value="m" type="radio"  />
-                                    <span class=black-text>Masculino</span>
-                              </label>
-                          
-                        </div>  
-                        <div class="row"> 
-                              <div class="input-field col s8">
-                                    <input value="{{carrera}}" id="carrera" type="text" name="carrera" class="validate"  required="" aria-required="true">
-                              </div>
+                     <div class="container"> 
+                        <div class="row">         
+                          <div class="input-field col s8">
+                                    <input value="{{nombre}}" id="first_name" type="text" name="nombre" class="validate"  required="" aria-required="true">
+                          </div> 
+                          <div class="input-field col s8">
+                                    <input value="{{apellido}}" id="last_name" type="text" name="apellido" class="validate"  required="" aria-required="true">
+                          </div> 
+                          <div class="row">
+                            <div class="col s8">
+                                <div class="col s12"><h6 class=black-text>Sexo</h6></div>
+                                <div class="col s1"></div>
+                                <div class="col s3">
+                                    <label>
+                                        <input class="with-gap" name="sexo" value="f" type="radio"/>
+                                          <span class=black-text>Femenino</span>
+                                    </label>
+                                </div>  
+                                <div class="col s3">
+                                    <label>
+                                        <input class="with-gap" name="sexo" value="m" type="radio"  />
+                                          <span class=black-text>Masculino</span>
+                                    </label>
+                                </div>  
+                            </div> 
+                          </div>
+                           
+                            <div class="row"> 
+                              <div class="col s2"></div>
+                                <div class="input-field col s8">
+                                      <input value="{{carrera}}" id="carrera" type="text" name="carrera" class="validate"  required="" aria-required="true">
+                                </div>
+                            </div>
+                            <div class="row"> 
+                              <div class="col s2"></div>
+                                  <div class="input-field col s8">
+                                        <input value="{{email}}" id="email" name="email" type="text" class="validate"  required="" aria-required="true">
+                                  </div>
+                            </div>
                         </div>
-                        <div class="row"> 
-                              <div class="input-field col s8">
-                                    <input value="{{email}}" id="email" name="email" type="text" class="validate"  required="" aria-required="true">
-                              </div>
-                        </div>
-                         <button class="btn waves-effect waves-light right"  type="submit" name="action">Editar
-                                  <i class="material-icons right">edit</i>
-                         </button> 
+                            <button class="btn waves-effect waves-light right"  type="submit" name="action">Editar
+                                    <i class="material-icons right">edit</i>
+                            </button> 
                       </div>
-                 </div>   
+                </div>   
              </form>        
         </div>
      
