@@ -1,0 +1,127 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/materialize.min.css')}}" media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+      <TITLE>Adoa</TITLE>
+
+    <body>
+      <style>
+        body{
+          background-image: url(static/images/administrador2.jpg);
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-attachment:fixed;
+            }
+        .card{
+              background: rgba(234, 234, 234, 0.3);
+            }
+        
+        input::-webkit-input-placeholder {
+              color: black;
+        }
+        .tabs .indicator { background-color: #000000;
+        height:3px; }   
+      </style>
+                 
+     <div class="navbar-fixed">
+        <nav class="red accent-4">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">ADOA</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                  <li><a href="administrador.html"><i class="material-icons left">keyboard_backspace</i>Regresar</a></li>
+                  
+                </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      {% with messages = get_flashed_messages()%}
+      {% if messages%}
+      {% for message in messages%}
+       <div class="row">
+          <div class="col s12 center-align">
+              <div class="chip red accent-4" style="padding: 0px 10px 10px 10px; width: 500px; height: 50px;">
+                  <i class="close material-icons right white-text">close</i>
+                  <h5 class="white-text"><b>{{ message }}</b> </h5>
+              </div>
+          </div>
+       </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith%}
+      <div class="container section">
+          <div class="card">
+              <div class="row">
+                  <div class="col s12">
+                      <form id="crearUser"class="col s12" action="/edit" method="POST">
+                          <div class="row">
+                              <div class="col s12"><h3 class=black-text>Modifique los datos que desee</h3></div>
+                              <div class="input-field col s3" class="white-text" >
+                                  <input  value="{{usuario.1}}" id="first_name" type="text" name="nombre" class="validate" >
+                                  <label for="first_name">Nombre</label>
+                              </div>
+                              <div class="input-field col s3">
+                                  <input value="{{usuario.2}}" id="last_name" type="text" name="apellido" class="validate">
+                                  <label for="last_name">Apellido</label>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col s12"><h6 class=black-text>Sexo</h6>
+                              </div>
+                              <div class="col s1"></div>
+                                  <label>
+                                      <input class="with-gap" name="sexo" type="radio"  value="f"/>
+                                        <span class=black-text>Femenino</span>
+                                  </label>
+                                  <label>
+                                      <input class="with-gap" name="sexo" type="radio" value="m" />
+                                        <span class=black-text>Masculino</span>
+                                  </label>   
+                          </div>   
+                          <div class="row"> 
+                              <div class="input-field col s6">
+                                    <input value="{{usuario.3}}" id="carrera" type="text" name="carrera" class="validate">
+                                    <label for="carrera">Carrera</label>
+                              </div>
+                          </div>
+                          <div class="row"> 
+                              <div class="input-field col s6">
+                                  <input value="{{usuario.5}}" id="email" type="text" name="email" class="validate">
+                                  <label for="email">Correo Electronico</label>
+                              </div>
+                          </div>            
+                          <p class="center-align">
+                            <button class="btn waves-effect waves-light" type="registrarse" name="action">Editar
+                                <i class="material-icons right">edit</i>
+                            </button>
+                          </p>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <script src="{{url_for('static', filename='js/jquery.js')}}"></script>
+      <script type="text/javascript" src="{{url_for('static', filename='js/materialize.min.js')}}"></script>
+      <script>
+          $(document).ready(function(){
+          $('.sidenav').sidenav();
+          $('.tabs').tabs();
+          $(".dropdown-trigger").dropdown({
+             coverTrigger: false
+                });
+          $('.chips').chips();
+          $('.tooltipped').tooltip();
+          $('.modal').modal();  
+       
+            });
+      </script>
+    </body>
+  </html>
